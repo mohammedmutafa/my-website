@@ -304,4 +304,75 @@
                 </a>
 
                 <a href="#" class="link-card" id="projects-link" role="button" tabindex="0" aria-label="Open projects and code">
-                    <svg class="link-icon" viewBox="0
+                    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 13h2v-2H3v2zm0 6h2v-2H3v2zm0-12h2V5H3v2zm4 6h14v-2H7v2zm0 6h14v-2H7v2zm0-12v2h14V7H7z" />
+                    </svg>
+                    <div class="link-title">projects and code</div>
+                </a>
+
+                <a href="#" class="link-card" id="contacts-link" role="button" tabindex="0" aria-label="Open contacts and more">
+                    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <div class="link-title">contacts and more</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <span class="copyright">© 2025 MOXV1</span>
+            <div class="social-links" role="navigation" aria-label="Social media links">
+                <!-- Twitter Link -->
+                <a href="https://twitter.com/yourtwitterhandle" target="_blank" rel="noopener" aria-label="Twitter">
+                    <svg class="social-link" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.79,4 12,5.79 12,8C12,8.34 12.04,8.67 12.12,9C8,8.81 4.44,6.85 2.2,4.13C1.82,4.68 1.62,5.32 1.62,6C1.62,7.22 2.34,8.28 3.43,8.82C2.73,8.8 2.08,8.59 1.55,8.26C1.55,8.27 1.55,8.29 1.55,8.3C1.55,10.13 3.02,11.63 5.02,11.95C4.67,12.04 4.3,12.08 3.92,12.08C3.65,12.08 3.39,12.05 3.14,12C3.66,13.46 5.04,14.52 6.69,14.54C5.43,15.52 3.85,16.13 2.14,16.13C1.81,16.13 1.49,16.11 1.17,16.07C2.84,17.11 4.92,17.7 7.16,17.7C16,17.7 20.75,11.88 20.75,6.64C20.75,6.48 20.75,6.31 20.74,6.15C21.58,5.59 22.3,4.87 22.9,4.03C22.09,4.45 21.21,4.76 20.28,4.92C21.22,4.36 22,3.56 22.46,2.6V6Z" />
+                    </svg>
+                </a>
+
+                <!-- GitHub Link -->
+                <a href="https://github.com/m0-0-v1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg class="social-link" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 0.2975C5.3725 0.2975 0 5.67 0 12.2975C0 17.5175 3.435 21.8975 8.205 23.4975C8.805 23.6075 9.025 23.2475 9.025 22.9375C9.025 22.6575 9.015 21.8975 9.01 20.8975C5.6725 21.5475 4.9675 19.3475 4.9675 19.3475C4.4225 17.8975 3.6325 17.4975 3.6325 17.4975C2.5475 16.7475 3.7175 16.7625 3.7175 16.7625C4.9225 16.8575 5.555 18.0125 5.555 18.0125C6.6325 19.8775 8.42 19.3475 9.135 19.0375C9.245 18.2575 9.5475 17.7375 9.885 17.4475C7.205 17.1575 4.39 16.1475 4.39 11.4975C4.39 10.1975 4.845 9.1475 5.615 8.3475C5.485 8.0475 5.085 6.7975 5.745 5.0975C5.745 5.0975 6.735 4.7875 9.005 6.3475C9.945 6.0775 10.965 5.9425 11.985 5.9375C13.005 5.9425 14.025 6.0775 14.965 6.3475C17.235 4.7875 18.225 5.0975 18.225 5.0975C18.885 6.7975 18.485 8.0475 18.355 8.3475C19.125 9.1475 19.58 10.1975 19.58 11.4975C19.58 16.1575 16.76 17.1525 14.07 17.4375C14.5 17.7975 14.88 18.5075 14.88 19.6075C14.88 21.1875 14.865 22.4875 14.865 22.9375C14.865 23.2475 15.08 23.6125 15.69 23.4875C20.565 21.8825 24 17.5075 24 12.2975C24 5.67 18.6275 0.2975 12 0.2975Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Example script for opening links on click - optional if you want keyboard accessibility
+        const musicLink = document.getElementById('music-link');
+        musicLink.addEventListener('click', () => {
+            window.open('https://moxv1.github.io/AudioPlayer/', '_blank');
+        });
+        musicLink.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                window.open('https://moxv1.github.io/AudioPlayer/', '_blank');
+            }
+        });
+
+        const projectsLink = document.getElementById('projects-link');
+        projectsLink.addEventListener('click', () => {
+            window.open('https://moxv1.github.io/', '_blank');
+        });
+        projectsLink.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                window.open('https://moxv1.github.io/', '_blank');
+            }
+        });
+
+        const contactsLink = document.getElementById('contacts-link');
+        contactsLink.addEventListener('click', () => {
+            window.open('https://linktr.ee/moxv1', '_blank');
+        });
+        contactsLink.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                window.open('https://linktr.ee/moxv1', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
