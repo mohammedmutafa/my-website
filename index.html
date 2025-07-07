@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MOXV1 - Developer and Maker</title>
     <style>
-        /* ... (نفس الستايل السابق تمامًا) ... */
         * {
             margin: 0;
             padding: 0;
@@ -297,22 +296,22 @@
             <p class="links-title">What I'm working on.</p>
 
             <div class="links-grid">
-                <a href="#" class="link-card" id="music-link">
-                    <svg class="link-icon" viewBox="0 0 24 24">
+                <a href="#" class="link-card" id="music-link" role="button" tabindex="0" aria-label="Open some old music">
+                    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z" />
                     </svg>
                     <div class="link-title">some old music</div>
                 </a>
 
-                <a href="#" class="link-card" id="projects-link">
-                    <svg class="link-icon" viewBox="0 0 24 24">
+                <a href="#" class="link-card" id="projects-link" role="button" tabindex="0" aria-label="Open projects and code">
+                    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z" />
                     </svg>
                     <div class="link-title">projects and code</div>
                 </a>
 
-                <a href="#" class="link-card" id="cv-link">
-                    <svg class="link-icon" viewBox="0 0 24 24">
+                <a href="#" class="link-card" id="cv-link" role="button" tabindex="0" aria-label="Open CV 2025 final PDF">
+                    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
                     </svg>
                     <div class="link-title">CV 2025 final (fr).pdf</div>
@@ -325,7 +324,7 @@
             <div class="footer-content">
                 <span class="copyright">© 2025 MOXV1</span>
                 <div class="social-links">
-                    <svg class="social-link" id="twitter-link" viewBox="0 0 24 24">
+                    <svg class="social-link" id="twitter-link" role="button" tabindex="0" aria-label="Open Twitter" viewBox="0 0 24 24">
                         <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.79,4 12,5.79 12,8C12,8.34 12.04,8.67 12.12,9C8,8.81 4.44,6.85 2.2,4.13C1.82,4.68 1.62,5.32 1.62,6C1.62,7.22 2.34,8.28 3.43,8.82C2.73,8.8 2.08,8.59 1.55,8.26C1.55,8.27 1.55,8.29 1.55,8.3C1.55,10.13 3.02,11.63 5.02,11.95C4.67,12.04 4.3,12.08 3.92,12.08C3.65,12.08 3.39,12.05 3.14,12C3.66,13.46 5.04,14.52 6.69,14.54C5.43,15.52 3.85,16.13 2.14,16.13C1.81,16.13 1.49,16.11 1.17,16.07C2.84,17.11 4.92,17.7 7.16,17.7C16,17.7 20.75,11.88 20.75,6.64C20.75,6.48 20.75,6.31 20.74,6.15C21.58,5.59 22.3,4.87 22.9,4.03C22.09,4.45 21.21,4.76 20.28,4.92C21.22,4.36 22,3.56 22.46,2.6V6Z" />
                     </svg>
                 </div>
@@ -337,24 +336,38 @@
         // استمع للنقر على كل رابط وفتح الرابط الصحيح في نافذة جديدة
         document.getElementById('music-link').addEventListener('click', function(e) {
             e.preventDefault();
-            window.open('https://www.youtube.com/watch?v=hSwcHHPcw2o&t=2872s&ab_channel=AmbientOutpost', '_blank');
+            window.open('https://www.youtube.com/watch?v=hSwcHHPcw2o&t=2872s&ab_channel=AmbientOutpost', '_blank', 'noopener');
         });
 
         document.getElementById('projects-link').addEventListener('click', function(e) {
             e.preventDefault();
-            window.open('https://github.com/m0-0-v1', '_blank');
+            window.open('https://github.com/m0-0-v1', '_blank', 'noopener');
         });
 
         document.getElementById('cv-link').addEventListener('click', function(e) {
             e.preventDefault();
-            // غيّر هذا المسار حسب مكان ملف الـ PDF عندك
-            window.open('cv_2025_final_fr.pdf', '_blank');
+            window.open('cv_2025_final_fr.pdf', '_blank', 'noopener');
         });
 
-        // مثال: فتح تويتر لو عندك حساب
         document.getElementById('twitter-link').addEventListener('click', function() {
-            window.open('https://twitter.com/yourtwitterhandle', '_blank');
+            window.open('https://twitter.com/yourtwitterhandle', '_blank', 'noopener');
         });
+
+        // دعم الوصول عبر الكيبورد (Enter/Space)
+        function addKeyboardSupport(id, url) {
+            const elem = document.getElementById(id);
+            elem.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.open(url, '_blank', 'noopener');
+                }
+            });
+        }
+
+        addKeyboardSupport('music-link', 'https://www.youtube.com/watch?v=hSwcHHPcw2o&t=2872s&ab_channel=AmbientOutpost');
+        addKeyboardSupport('projects-link', 'https://github.com/m0-0-v1');
+        addKeyboardSupport('cv-link', 'cv_2025_final_fr.pdf');
+        addKeyboardSupport('twitter-link', 'https://twitter.com/yourtwitterhandle');
     </script>
 </body>
 </html>
